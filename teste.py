@@ -14,12 +14,8 @@ def fetch_data(endpoint, filter_params={}):
 
 
 rick_data = fetch_data('character', {'id': 1})
-
-
 print(rick_data['name'])
-
 rick_search_data = fetch_data('character', {'name': 'Rick Sanchez'})
-
 controladora= 0
 print(len(rick_search_data['results']))
 while 'results' in rick_search_data and len(rick_search_data['results']) >= controladora+1:
